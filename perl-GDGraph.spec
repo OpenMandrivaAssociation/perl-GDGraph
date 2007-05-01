@@ -1,7 +1,7 @@
 %define module  GDGraph
 %define name	perl-%{module}
-%define version 1.43
-%define release 2mdk
+%define version 1.44
+%define release %mkrel 1
 
 Name: 		%{name}
 Version: 	%{version}
