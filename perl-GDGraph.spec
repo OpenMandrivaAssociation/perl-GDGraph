@@ -1,7 +1,7 @@
 %define module  GDGraph
 %define name	perl-%{module}
 %define version 1.44
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: 		%{name}
 Version: 	%{version}
@@ -19,8 +19,8 @@ BuildRequires:	perl-GDTextUtil >= 0.83
 BuildRequires:	gd-devel
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
-Provides:	perl-Gd-Graph
-Obsoletes:	perl-Gd-Graph
+Provides:	perl-GD-Graph
+Obsoletes:	perl-GD-Graph
 
 %description
 This is GDGraph, a package to generate charts, using Lincoln
