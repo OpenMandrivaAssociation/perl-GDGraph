@@ -18,7 +18,6 @@ BuildRequires:	perl-GD >= 1.20
 BuildRequires:	perl-GDTextUtil >= 0.83
 BuildRequires:	gd-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 Provides:	perl-GD-Graph
 Obsoletes:	perl-GD-Graph
 
