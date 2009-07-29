@@ -1,16 +1,16 @@
-%define module  GDGraph
-%define name	perl-%{module}
-%define version 1.44
-%define release %mkrel 4
+%define upstream_name    GDGraph
+%define upstream_version 1.44
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Graph Plotting Module for Perl 5
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:	http://search.cpan.org/CPAN/authors/id/M/MV/MVERB/%{module}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{module}/
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://search.cpan.org/CPAN/authors/id/M/MV/MVERB/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -18,7 +18,7 @@ BuildRequires:	perl-GD >= 1.20
 BuildRequires:	perl-GDTextUtil >= 0.83
 BuildRequires:	gd-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 Provides:	perl-GD-Graph
 Obsoletes:	perl-GD-Graph
 
@@ -28,7 +28,7 @@ Stein's GD.pm. See the documentation for some history and more
 information.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # perl path hack
 #find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl|g"
@@ -52,4 +52,3 @@ rm -rf %{buildroot}
 %doc CHANGES README
 %{perl_vendorlib}/GD/*
 %{_mandir}/*/*
-
