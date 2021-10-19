@@ -22,17 +22,17 @@ Stein's GD.pm. See the documentation for some history and more
 information.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 # perl path hack
 #find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl|g"
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor </dev/null
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 make test
@@ -40,5 +40,5 @@ make test
 %files
 %doc CHANGES README
 %{perl_vendorlib}/GD/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
