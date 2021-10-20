@@ -14,6 +14,7 @@ BuildRequires:	gd-devel
 BuildRequires:	perl-devel
 BuildRequires:	perl-GD >= 1.20
 BuildRequires:	perl-GDTextUtil >= 0.83
+BuildRequires:	perl(Test::More)
 Provides:	perl-GD-Graph
 
 %description
@@ -41,4 +42,3 @@ make test
 %doc CHANGES README
 %{perl_vendorlib}/GD/*
 %doc %{_mandir}/man3/*
-
