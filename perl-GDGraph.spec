@@ -15,6 +15,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-GD >= 1.20
 BuildRequires:	perl-GDTextUtil >= 0.83
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test)
 Provides:	perl-GD-Graph
 
 %description
