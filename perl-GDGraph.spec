@@ -1,14 +1,14 @@
 %define modname	GDGraph
-%define modver	1.44
+%define modver	1.56
 
 Summary:	Graph Plotting Module for Perl 5
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	16
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/M/MV/MVERB/%{modname}-%{modver}.tar.bz2
+Url:		https://github.com/bestpractical/gdgraph
+Source0:	https://cpan.metacpan.org/authors/id/B/BP/BPS/GDGraph-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	gd-devel
