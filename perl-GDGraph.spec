@@ -4,7 +4,7 @@
 Summary:	Graph Plotting Module for Perl 5
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/bestpractical/gdgraph
@@ -18,6 +18,7 @@ BuildRequires:	perl-GDTextUtil >= 0.83
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
 BuildRequires: perl(Test::Exception)
+BuildRequires:	perl(Capture::Tiny)
 Provides:	perl-GD-Graph
 
 %description
